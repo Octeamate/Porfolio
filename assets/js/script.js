@@ -15,7 +15,7 @@ function afficherProjets() {
     projets.forEach((projet, index) => {
         // Création du lien
         const monLien = document.createElement("a");
-        monLien.textContent = `Projet ${index + 1}`;
+        monLien.textContent = `Projet ${index + 1} :`;
         monLien.href = projet.lien;
         monLien.target = "_blank"; // ouvre dans un nouvel onglet
 
@@ -25,10 +25,11 @@ function afficherProjets() {
         monImage.alt = `Image du projet ${index + 1}`;
         monImage.style.width = "400px";
 
-        // Ajout du lien et l'image dans la galerie
+        // Ajout du lien et de l'image dans la galerie
         galerie.appendChild(monLien);
         galerie.appendChild(monImage);
         galerie.appendChild(document.createElement("br"));
+        console.log(galerie)
     });
 }
 
